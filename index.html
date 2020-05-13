@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+    
+    <head>
+    <meta charset=utf-8>
+    <Title>Sydny and Skyler</Title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico&display=swap">
+    <script src="script.js"></script>
+    </head>
+    
+    <body>
+        <h1>Sydny and Skyler</h1>
+        
+        <h2>You're invited</h2>
+        
+        <p>Join us September the 12th 2020 as we celebrate our love and the beginning of our new life together.</p>
+        
+        <!--- Floral arrangements in corners of page --->
+        
+        <div class="bouquetOne"> 
+        <img src="FlowerBouquetTwo.png" alt="Bouquet of Flowers" style="width:175px; height: 175px;">    
+        </div>
+        
+        <div class="bouquetTwo">
+        <img src="FlowerBouquetFlipRight.png" alt="Bouquet of Flowers" style="width:175px; height: 175px;">
+        </div>
+        
+        <div class="bouquetThree">
+        <img src="FlowerBouquetFlipLeft.png" alt="Bouquet of Flowers" style="width:175px; height: 175px;">
+        </div>
+        
+        <div class="bouquetFour">
+        <img src="FlowerBouquetFlipBottom.png" alt="Bouquet of Flowers" style="width:175px; height: 175px;"> 
+        </div>
+        
+        <!--- Three engagement pictures with corresponding size and JS functions --->
+        
+        <div class="engagementPics">         
+        <img src="EngagementOne.jpg" alt="Sydny and Skyler" id="1" style="width:350px; height:250px;" onmouseover="imageExpand();" onmouseout="imageReset();">
+        <img src="EngagementTwo.jpg" alt="Sydny and Skyler" id ="2" style="width:350px; height:250px;" onmouseover="imageExpandTwo();" onmouseout="imageResetTwo();">
+        <img src="EngagementThree.jpg" alt="Sydny and Skyler" id="3" style="width:350px; height:250px;" onmouseover="imageExpandThree();" onmouseout="imageResetThree();">
+        </div>
+        
+        <p>Please enter your email address below to receive news and updates regarding the event.</p>
+        
+        <!--- Test feature! Email submission. Will save to file on local device. --->
+        
+        <input type="email" id="email">
+        <input type="submit" value="Submit" onclick="saveFile()">
+        
+    </body>
+    
+    <footer>
+       <small>Copyright &copy 2020 Skyler Savard </small>  
+    </footer>
+    
+</html>
