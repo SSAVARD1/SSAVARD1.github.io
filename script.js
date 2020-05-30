@@ -57,34 +57,17 @@ function imageResetThree() {
 }
 
 let saveFile = () => {
+
+    var guestInfo = { email: email.value };
+    var infoString = JSON.stringify(guestInfo);
+    localStorage.setItem("testEmail", infoString);
     
-    const email = document.getElementById('email');
+    var info = localStorage.getItem("testEmail");
+    var infoObj = JSON.parse(info);
     
-    let data = '\n Email: ' + email.value;
-    
-    const txtToBlob = new Blob([data], { type: 'text/plain' });
-    const emailFileName = 'emailData.txt';
-    
-    let newLink = document.createElement("a");
-    newLink.download = emailFileName;
-    
-    if (window.webkitURL != null) {
-        
-        newLink.href = window.webkitURL.createObjectURL(txtToBlob);
-        
-    }
-    
-    else {
-        
-        newLink.href = window.URL.createObjectURL(txtToBlob);
-        
-        newLink.style.display = "none";
-        
-        document.body.appendChild(newLink);
-       
-    }
-    
-    newLink.click();
+    window.alert("Thank you! You've submitted " + infoObj.email + ". Stay tuned for more updates!");
+    document.getElementById("email").value = "";
     
 }
+    
 
